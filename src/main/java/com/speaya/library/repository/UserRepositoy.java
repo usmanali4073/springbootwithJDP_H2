@@ -7,13 +7,16 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
-@Repository
 @Transactional
+@Repository
 public class UserRepositoy {
 
     @PersistenceContext
     private EntityManager entityManager;
 
+    public  UserRepositoy(){
+
+    }
     public long insert(User user) {
 
         this.entityManager.persist(user);

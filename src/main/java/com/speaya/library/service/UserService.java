@@ -11,7 +11,7 @@ public class UserService {
     @Autowired
     private UserRepositoy _userReposito;
 
-    public void insert(User user){
-        this._userReposito.insert(user);
+    public long insert(User user) {
+        return this._userReposito.insert(user);
     }
 }
